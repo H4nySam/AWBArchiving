@@ -22,3 +22,15 @@ D:\Dart\AWBArchiving\AWBArchiving.BLL\obj\Debug\AWBArchiving.BLL.csprojResolveAs
 D:\Dart\AWBArchiving\AWBArchiving.BLL\obj\Debug\AWBArchiving.BLL.csproj.CoreCompileInputs.cache
 D:\Dart\AWBArchiving\AWBArchiving.BLL\obj\Debug\AWBArchiving.BLL.dll
 D:\Dart\AWBArchiving\AWBArchiving.BLL\obj\Debug\AWBArchiving.BLL.pdb
+D:\Dart\Git\AWBArchiving.BLL\bin\Debug\AWBArchiving.BLL.dll
+D:\Dart\Git\AWBArchiving.BLL\bin\Debug\AWBArchiving.BLL.pdb
+D:\Dart\Git\AWBArchiving.BLL\bin\Debug\AWBArchiving.DAL.dll
+D:\Dart\Git\AWBArchiving.BLL\bin\Debug\EntityFramework.dll
+D:\Dart\Git\AWBArchiving.BLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Dart\Git\AWBArchiving.BLL\bin\Debug\AWBArchiving.DAL.pdb
+D:\Dart\Git\AWBArchiving.BLL\bin\Debug\EntityFramework.xml
+D:\Dart\Git\AWBArchiving.BLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Dart\Git\AWBArchiving.BLL\obj\Debug\AWBArchiving.BLL.csprojResolveAssemblyReference.cache
+D:\Dart\Git\AWBArchiving.BLL\obj\Debug\AWBArchiving.BLL.csproj.CoreCompileInputs.cache
+D:\Dart\Git\AWBArchiving.BLL\obj\Debug\AWBArchiving.BLL.dll
+D:\Dart\Git\AWBArchiving.BLL\obj\Debug\AWBArchiving.BLL.pdb

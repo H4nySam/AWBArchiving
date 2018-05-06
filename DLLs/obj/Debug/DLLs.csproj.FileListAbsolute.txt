@@ -8,3 +8,8 @@ D:\Dart\AWBArchiving\DLLs\bin\Debug\DLLs.pdb
 D:\Dart\AWBArchiving\DLLs\obj\Debug\DLLs.csproj.CoreCompileInputs.cache
 D:\Dart\AWBArchiving\DLLs\obj\Debug\DLLs.dll
 D:\Dart\AWBArchiving\DLLs\obj\Debug\DLLs.pdb
+D:\Dart\Git\DLLs\bin\Debug\DLLs.dll
+D:\Dart\Git\DLLs\bin\Debug\DLLs.pdb
+D:\Dart\Git\DLLs\obj\Debug\DLLs.csproj.CoreCompileInputs.cache
+D:\Dart\Git\DLLs\obj\Debug\DLLs.dll
+D:\Dart\Git\DLLs\obj\Debug\DLLs.pdb
