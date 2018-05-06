@@ -1,0 +1,115 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_BaseLayout.cshtml";
+}
+
+
+@section head{
+
+
+    <link href="~/Assets/Custom/DefaultEN.css" rel="stylesheet" />
+    <style>
+        .modal {
+            z-index: 10500 !important;
+        }
+    </style>
+
+    @*@if (userIdentity.LangKey == "AR")
+        {
+
+
+        }
+        else
+        {
+            <link href="/Style/Custom/entity.css" rel="stylesheet" />
+            <style>
+                .page-content-wrapper .page-content {
+                    margin-left: 0px !important;
+                }
+
+                .btn.blue-stripe {
+                    border-left: 2px solid #45828a !important;
+                }
+            </style>
+        }*@
+
+    <script>
+        var isDisplayAlertBeforeLoad = false;
+    </script>
+}
+
+<!-- BEGIN SIDEBAR -->
+<div class="page-content-wrapper">
+    <div class="page-sidebar-wrapper">
+        <div class="page-sidebar navbar-collapse collapse">
+            <ul class="page-sidebar-menu   ">
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-home"></i>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+
+                <li class="nav-item  ">
+                    <a href="@Url.Action("Index","Views",new { @id = 1 })" class="nav-link nav-toggle">
+                        <i class="icon-globe-alt"></i>
+                        <span class="title">Views</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="page-content-wrapper">
+
+        <!-- BEGIN CONTENT BODY -->
+        <div class="page-content">
+
+            @RenderBody()
+        </div>
+    </div>
+
+</div>
+
+
+@section Scripts
+{
+
+    @Html.Raw(SquishIt.Framework.Bundle.JavaScript()
+
+                                                     .Add("~/Assets/Template/global/plugins/bootstrap-confirmation/bootstrap-confirmation.min.js")
+                                                     .Add("~/Assets/Template/global/plugins/jquery.blockui.min.js")
+                                                     .Add("~/Assets/Template/global/plugins/bootstrap-confirmation/bootstrap-confirmation.min.js")
+                                                     .Add("~/Assets/Template/global/plugins/owl-carousel/assets/js/bootstrap-transition.js")
+                                                     .Add("~/Assets/Template/global/plugins/owl-carousel/assets/js/bootstrap-collapse.js")
+                                                    .Add("~/Assets/Template/global/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js")
+                                                    .Add("~/Assets/Template/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js")
+                                                    .Add("~/Assets/Template/global/plugins/jquery-bootpag/jquery.bootpag.min.js")
+                                                    .Add("~/Assets/Template/global/plugins/bootstrap-touchspin/bootstrap.touchspin.js")
+                                                   .Render("~/scripts/combined_coo1.js")
+                                                )
+
+
+    <script>
+
+
+
+        jQuery(window).bind('beforeunload', function (e) {
+            if (isDisplayAlertBeforeLoad) {
+                var message = "There are unsaved changes, are you sure you want to exit?";
+                e.returnValue = message;
+                return message;
+            }
+        });
+    </script>
+
+
+
+    @RenderSection("Scripts", false)
+
+}
+
+
+
+
+

@@ -1,0 +1,10 @@
+c:\users\hany\source\repos\AWBArchiving\DLLs\bin\Debug\DLLs.dll
+c:\users\hany\source\repos\AWBArchiving\DLLs\bin\Debug\DLLs.pdb
+c:\users\hany\source\repos\AWBArchiving\DLLs\obj\Debug\DLLs.csproj.CoreCompileInputs.cache
+c:\users\hany\source\repos\AWBArchiving\DLLs\obj\Debug\DLLs.dll
+c:\users\hany\source\repos\AWBArchiving\DLLs\obj\Debug\DLLs.pdb
+D:\Dart\AWBArchiving\DLLs\bin\Debug\DLLs.dll
+D:\Dart\AWBArchiving\DLLs\bin\Debug\DLLs.pdb
+D:\Dart\AWBArchiving\DLLs\obj\Debug\DLLs.csproj.CoreCompileInputs.cache
+D:\Dart\AWBArchiving\DLLs\obj\Debug\DLLs.dll
+D:\Dart\AWBArchiving\DLLs\obj\Debug\DLLs.pdb

@@ -1,0 +1,178 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>AWB - Archiving</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Desc" name="description" />
+    <meta content="" name="author" />
+    <script>
+        var isEnglish = true;
+    </script>
+    @Html.Raw(
+                                                    SquishIt.Framework.Bundle.Css()
+                                                                                .Add("~/Assets/Template/global/plugins/bootstrap-select/css/bootstrap-select.min.css")
+                                                                                .Add("~/Assets/Template/global/plugins/font-awesome/css/font-awesome.min.css")
+                                                                                .Add("~/Assets/Template/global/plugins/simple-line-icons/simple-line-icons.min.css")
+                                                                                .Add("~/Assets/Template/global/plugins/bootstrap-toastr/toastr.css")
+                                                                                .Add("~/Assets/Template/pages/css/login-4.css")
+                                                                                .Render("~/css/combinedMasterGeneric.css"))
+
+    <script>
+        var isEnglish = true;
+    </script>
+    @Html.Raw(
+                                             SquishIt.Framework.Bundle.Css()
+                                                                         .Add("~/Assets/Template/global/plugins/bootstrap/css/bootstrap.min.css")
+                                                                         .Add("~/Assets/Template/global/css/components.min.css")
+                                                                         .Add("~/Assets/Template/global/css/plugins.min.css")
+                                                                         .Add("~/Assets/Template/layouts/layout4/css/layout.min.css")
+                                                                         .Add("~/Assets/Template/layouts/layout4/css/themes/default.min.css")
+                                                                         .Add("~/Assets/Template/Custom/global.css")
+                                                                         .Add("~/Assets/Template/layouts/layout4/css/custom.min.css")
+                                                                         .Render("~/css/combinedMaster_en.css"))
+
+
+    <script src="~/Assets/Template/global/plugins/jquery.min.js"></script>
+    <link rel="shortcut icon" href="~/Assets/Images/favicon.ico" />
+    <style>
+        /*fixes the user email displayed on the top bar*/
+        .page-header.navbar .top-menu .navbar-nav > li.dropdown span.dropdown-toggle:hover {
+            background-color: transparent;
+        }
+
+        .moment-picker {
+            z-index: 200000;
+        }
+    </style>
+    @RenderSection("head", false)
+
+</head>
+
+<body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo">
+    <!-- BEGIN HEADER -->
+    <div class="page-header navbar navbar-fixed-top">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner ">
+            <!-- BEGIN LOGO -->
+            <a href="@Url.Action("Index","Home",new {@area = "" })" style="float: none !important;">
+                <div class="page-logo">
+
+                    <img width="200" class="pull-right" src="~/Assets/Template/Custom/1508833895_865_201870_attijariwafa_logo_groupe_cmjn.jpg" />
+                </div>
+            </a>
+            <!-- END LOGO -->
+            <div class="page-top">
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+
+
+
+                        <!-- END NOTIFICATION DROPDOWN -->
+                        <li class="separator hide"> </li>
+                        <!-- BEGIN QUICK SIDEBAR TOGGLER -->
+                        <li class="dropdown dropdown-extended quick-sidebar-toggler" style="width: 71px;">
+                            <a id="lbsignout" class="dropdown-toggle" data-hover="dropdown" data-close-others="true" style="text-align: center;"
+                               title="Log Out" href="@Url.Action("Logout", "Home", new { Area = "" })">
+                                <i class="icon-logout" style="font-size: 20px;"></i>
+                            </a>
+                        </li>
+                        <!-- END QUICK SIDEBAR TOGGLER -->
+                    </ul>
+                </div>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END PAGE TOP -->
+        </div>
+        <!-- END HEADER INNER -->
+    </div>
+    <!-- END HEADER -->
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    <div class="clearfix"> </div>
+    <!-- END HEADER & CONTENT DIVIDER -->
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        @RenderBody()
+    </div>
+
+
+
+
+    <script>
+        function changeLanguage() {
+            document.getElementById('formChangeLang').submit();
+        }
+    </script>
+
+    @Html.Raw(SquishIt.Framework.Bundle.JavaScript()
+                   .Add("~/Assets/Template/global/plugins/bootstrap/js/bootstrap.min.js")
+                   .Add("~/Assets/Template/global/scripts/app.min.js")
+                   .Add("~/Assets/Template/layouts/layout4/scripts/layout.min.js")
+                   .Add("~/Assets/Template/layouts/layout4/scripts/demo.min.js")
+                   .Add("~/Assets/Template/global/plugins/jquery-validation/js/jquery.validate.min.js")
+                   .Add("~/Assets/Template/global/plugins/jquery-validation/js/additional-methods.min.js")
+
+                   .Render("~/css/combinedMasterGenericScripts1.js"))
+
+
+
+
+
+    @Html.Raw(SquishIt.Framework.Bundle.JavaScript()
+                               .Add("~/Assets/Template/global/plugins/moment.min.js")
+                               .Add("~/Assets/Template/global/plugins/bootstrap-toastr/toastr.js")
+                               .Add("~/Assets/Template/global/plugins/bootstrap-select/js/bootstrap-select.min.js")
+                               .Add("~/Assets/Template/global/plugins/respond.min.js")
+                               .Add("~/Assets/Template/global/plugins/excanvas.min.js")
+                               .Add("~/Assets/Template/global/plugins/ie8.fix.min.js")
+                               .Render("~/css/combinedMasterGenericScripts2.js"))
+
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('.btn-save,input[type="submit"],.btn-submit').each(function () {
+                $(this).removeAttr('disabled');
+            });
+        });
+    </script>
+    <script>
+        //   console.log('daaymmmm');
+        $('.btn-save,input[type="submit"],.btn-submit').each(function () {
+            $(this).attr('disabled', '');
+        });
+    </script>
+
+
+
+
+    @RenderSection("Scripts", false)
+
+
+    <script>
+        function changeLanguage() {
+            document.getElementById('formChangeLang').submit();
+        }
+
+        function scrollToTop() {
+            var scrollToPoint = $('.page-header').offset().top - 500;
+            $('html, body').animate({ scrollTop: scrollToPoint }, 100);
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

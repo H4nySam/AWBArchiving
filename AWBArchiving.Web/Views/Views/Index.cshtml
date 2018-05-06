@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+@model System.Data.DataTable
+
+@{
+    int id = ViewBag.Id;
+    string search = ViewBag.Search;
+}
+
+
+<div class="portlet light bordered">
+    <div class="portlet-title">
+        <div class="caption">
+            <span class="caption-subject">View Name</span>
+        </div>
+        @using (Html.BeginForm("Search", "Views", FormMethod.Get))
+        {
+            <div class="columns columns-right btn-group pull-right">
+                <a class="btn btn-default" name="refresh" title="Refresh" onclick="$(this).closest('form').submit();"><i class="glyphicon glyphicon-refresh icon-refresh"></i></a>
+            </div>
+            <div class="pull-right ">
+                <input class="form-control" name="search" type="text" placeholder="Search" value="@search" title="@search">
+            </div>
+            <input type="hidden" value="@id" name="id" />
+        }
+
+    </div>
+    <div class="portlet-body">
+        <div class="table-scrollable">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        @foreach (var column in Model.Columns)
+                        {
+
+                            <th> @column.ToString() </th>
+                        }
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (System.Data.DataRow row in Model.Rows)
+                    {
+                        <tr>
+                            @foreach (var cell in row.ItemArray)
+                            {
+                                <td>@cell.ToString()</td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
