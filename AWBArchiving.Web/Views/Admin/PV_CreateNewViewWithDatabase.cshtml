@@ -1,0 +1,103 @@
+﻿<div class="portlet light bordered">
+    <div class="portlet-title">
+        <div class="caption font-red-sunglo">
+            <i class="icon-settings font-red-sunglo"></i>
+            <span class="caption-subject bold uppercase"> Create New View </span>
+        </div>
+        <div class="actions">
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <div role="form">
+            <div class="form-body">
+                <div class="form-group form-md-line-input">
+                    <input type="text" class="form-control" id="txtDB" placeholder="IP Address">
+                    <label for="txtDB">SQL Server IP Address</label>
+                </div>
+                <div class="funkyradio">
+                    <h4>User Authentication</h4>
+                    <div class="funkyradio-danger">
+                        <input type="radio" name="dbcon" id="radioUserAuth" />
+                        <label for="radioUserAuth">Windows Authentication</label>
+                    </div>
+                    <div class="funkyradio-success">
+                        <input type="radio" name="dbcon" id="radioSQLAuth" />
+                        <label for="radioSQLAuth">SQL Authentication</label>
+                    </div>
+                </div>
+                <div id="usrAuth" style="display:none; margin-top:10px;" >
+                    <div class="form-group form-md-line-input">
+                        <input type="text" class="form-control" id="txtUsername" placeholder="User Name">
+                        <label for="txtDB">Username</label>
+                    </div>
+
+                    <div class="form-group form-md-line-input">
+                        <input type="text" class="form-control" id="txtPassword" placeholder="Password">
+                        <label for="txtPassword">Password</label>
+                    </div>
+
+                </div>
+                <div class="form-group form-md-line-input has-info" id="divDBSel" style="display:none;">
+                    <select class="form-control" id="form_control_1">
+                        <option value=""></option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                    <label for="form_control_1">Database</label>
+                </div>
+
+            </div>
+            <div class="form-actions ">
+                <a  class="btn blue" onclick="selectDB();">Select DB</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function selectDB() {
+
+        var dbVal = $("#txtDB").val();
+        var usrName = $("#txtUsername").val();
+        var pass = $("#txtPassword").val();
+        var serviceURL = '/Admin/GetDBs?db=' + dbVal;
+
+
+        var selectedAction = $("input[type='radio'][name='dbcon']:checked");
+        var selectedActionId = selectedAction.attr('id');
+        if (selectedActionId === "radioUserAuth") {
+
+        }
+        else {
+            serviceURL = serviceURL + '&uname=' + usrName + '&pass=' + pass;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: serviceURL,
+            contentType: "application/json; charset=utf-8",
+            dataType: "html",
+            success: function (result, status, xhr) {
+                console.log(result);
+            },
+            error: function (xhr, status, error) {
+                console.log("Error: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+                toastr.error("Couldn't connect");
+            }
+        });
+    }
+    $("input[type='radio'][name='dbcon']").change(function () {
+        var selectedAction = $("input[type='radio'][name='dbcon']:checked");
+        var selectedActionId = selectedAction.attr('id');
+        if (selectedActionId === "radioUserAuth") {
+            $("#usrAuth").hide();
+        }
+        else {
+            $("#usrAuth").show();
+
+        }
+    });
+
+
+</script>

@@ -9,10 +9,11 @@ namespace AWBArchiving.Web.Controllers
 {
     public class ViewsController : Controller
     {
+        ViewLogic log = new ViewLogic();
+
         // GET: Views
         public ActionResult Index(int id, string search)
         {
-            ViewLogic log = new ViewLogic();
             var data =  log.SearchView(id,search);
             ViewBag.Id = id;
             ViewBag.Search = search;

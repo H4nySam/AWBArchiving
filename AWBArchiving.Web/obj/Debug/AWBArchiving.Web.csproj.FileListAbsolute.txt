@@ -88,3 +88,4 @@ D:\Dart\Git\AWBArchiving.Web\obj\Debug\AWBArchiving.Web.csprojResolveAssemblyRef
 D:\Dart\Git\AWBArchiving.Web\obj\Debug\AWBArchiving.Web.csproj.CoreCompileInputs.cache
 D:\Dart\Git\AWBArchiving.Web\obj\Debug\AWBArchiving.Web.dll
 D:\Dart\Git\AWBArchiving.Web\obj\Debug\AWBArchiving.Web.pdb
+D:\Dart\Git\AWBArchiving.Web\bin\Microsoft.SqlServer.Smo.dll
